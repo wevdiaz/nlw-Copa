@@ -17,7 +17,7 @@ export const getServerSideProps = async () => {
 
   return {
     props: {
-      count: data.pools,
+      count: data.count,
     }
   }
 }
