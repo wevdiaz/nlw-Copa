@@ -7,6 +7,7 @@ import { poolRoute } from "../src/routes/pool";
 import { userRoute } from "../src/routes/user";
 import { guessRoute } from "../src/routes/guess";
 import { authRoutes } from "../src/routes/auth";
+import { gameRoute } from "../src/routes/game";
 
 
 async function bootstrap() {
@@ -28,6 +29,7 @@ async function bootstrap() {
   await fastify.register(userRoute); 
   await fastify.register(guessRoute); 
   await fastify.register(authRoutes);
+  await fastify.register(gameRoute);
 
   await fastify.listen({ port: 3333, host: "0.0.0.0" });
 }
